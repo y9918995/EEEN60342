@@ -1001,6 +1001,70 @@ Now, before in this model we have transient and sub-transient values of a time c
 So in conclusion known to facilitate power system studies are models of synchronous machines which are more voltage and current than current influx oriented are needed because of that parameters need to be adjusted to.. well to be derived, alternative parameters have to be derived based on the parameters and circuits and that's why we ended up with a model like this which is the model by the way widely used in all commercial level with packages, I think that there is no commercial level package for power systems stability or any type of power system studies where this type of model is not used where instead of this the model of influxes and currents is used.  
  
   
+## 1.4.4 Modelling of Excitation Systems  
+LECTURER:   
+OK. So the next section that we are going to talk about is Modelling of the Excitation System.  
+The first of, not necessarily traditionally, but the...  
+The first group of controllers that is required to control synchronous machines either in steady state or during transients, is the control of terminal voltage.  
+So, the excitation systems are there predominantly to fulfil that role.  
+Now, excitation systems should do two things.  
+It's commonly miss...  
+their role is quite often not fully appreciated, or let's say, accurately enough described.  
+Typically, people refer to their role as the first bold point on this slide; which is to provide excitation current, field current, and to adjust it so that the voltage of the generator terminals is within the limits and capabilities of the generator.  
+What they quite commonly forget to mention at this stage is that equally important role of excitation system is to make sure that system is able to respond to transient disturbances, in such a way so that the transient stability is maintained.  
+Devices that we're talking about here are devices that produce DC current, which is then injected or supplied to field winding.  
+There are various waves, various ways of producing DC current.  
+And these devices are typically much, much, much smaller, than the actual synchronous machine itself.  
+Because they are providing only the excitation current, and whatever the size of the generator is, this is a completely different thing afterwards.  
+So as you can see there, their size is between 2 and 3.5 kilowatts per megawatt ampere of the generator rating.  
+So for a 100 megawatt ampere generator, we need a 200 kilowatt; actually a system which is much smaller.  
+So the excitation system therefore has two important roles.  
+One is to control the voltage at generator terminals, so that the voltage stays always within certain limits following the disturbance and in steady state.  
+And the other, equally important, is when the disturbance happens, this will produce very quickly increased, so that the electrical power balances mechanical power, And then the disturbance between mechanical and electrical power is minimised so that the machine accelerates less.  
+The excitation system, you can see it has several components, one of which is the actual device which produces DC current, And as I said, there are different types of this device.  
+It can be either a normal DC generator, or it can be an AC static exciter, so power electronic based devices, or it can be an AC generator which has then a converter at the end, and then the alternating current produced by that type of generator is rectified and then supplied to the field winding of the generator as a DC current. And so on.  
+So there are different ways of producing DC current, But this is beyond the discussion here.  
+What we are talking about is the components of the overall excitation system; And they include exciter, so device which basically produces DC current, Then we have some transducers and limiters.  
+Transducers which measure, which detect what are the changes in the terminal current, terminal voltage sorry, terminal voltage of the generator, Provide that as a signal to a regulator, Compare it with the set reference value.  
+If there is no difference, then there is no need to change anything, If the terminal voltage is different from the reference point, then obviously the regulator in the loop here is required to either increase or reduce DC current in the rotor of the generator, And then generator corresponds respectively obviously.  
+Now there are certain limiters and protective circuits to limit the signals that this controller can be exposed to, so to protect them obviously.  
+And in case that the measurement is not done at the end of the generator terminals, instead the measurement sometimes can be taken at the high voltage side of the transformer if that is the voltage to be regulated.  
+Then this load compensator part in the equivalent circuit Has a role to compensate the voltage drop between the measurement point and generator terminal so that the regulator or exciter know exactly how much the current in the field winding should be increased to produce appropriate voltage at the desired point.  
+So obviously the excitation system can therefore control not only voltage at the generator terminals, but it can control voltage at the given point in the system if appropriately designed.  
+Sometimes, in addition to these blocks already described, the excitation system has another block, which is called power system stabiliser.  
+And it is not part of the excitation system as such, It's an additional block, but quite often especially with more than devices, it goes together with them, and then its...  
+The role of power system stabiliser is obviously to control power oscillations, or speed of the generator rather than voltage.  
+So these together is the excitation system, which you can buy nowadays as a single thing, and you can... this could be digital, And you can disconnect different components that you may not need, But as a minimum you would have regulator and exciter.  
+So this, the part which exclude power system stabiliser, so on this slide in front of you, everything except the green box, would be commonly referred to as automatic voltage regulator, or AVR.  
+And I will be using that abbreviation throughout the presentation from now on.  
+So AVR's role is both to generate and regulate DC current, so that the terminal voltage of the generator can be maintained within prescribed limits during transients and in steady state, And to provide enough voltage-boosting capability so that transient stability of the generator is maintained; Predominantly first swing stability, Because first swing is when we need to inject a lot of electrical power to reduce the acceleration of the generator.  
+I have already discussed these different components of the excitation system so there is no need to go through these slides.  
+And as I said there are different types of excitation systems.  
+And excitation system modes depending whether it's a static exciter, whether it's a rotating exciter, DC generator or AC generator with rectified output, and so on.  
+One thing that is important to mention is the basic characteristics of different excitation systems.  
+Different AVRs.  
+Is that there are two things to remember.  
+One is how big; how large the signal can be injected, And the second one is how fast it can be done.  
+So these two properties, whatever the other components of the model are, There are two parameters which are essential.  
+One is time constant, and the other is the gain.  
+For practical real-life excitation systems, these two do not go together in terms of increasing together or decreasing together.  
+They go in opposite directions.  
+In other words, rotational, historically fast excitation systems, were based on DC generators.  
+These types of devices were rather slow, in responding because obviously they involved inertia, so it takes time to change the output.  
+And the magnification of the signal that they could produce was not very high.  
+So they were with a longer time constant, and smaller gains.  
+Newer modern excitation systems are typically static excitation systems and they have, their property is they can react very fast, there is no inertia involved there, it's just power electronics, And the gain can be very, very high.  
+So in this case we have high gain and short time constant.  
+So in all the models at here, that we are doing and using in different studies, we have to be aware that if you put long time constant, you can't put a high gain; Because a device like that basically doesn't exist.  
+So long time constant, small gain; Small time constant, large gain.  
+The values are shown in the slide, typical values, So it can be... gains can range anywhere between 10 and 200 or 300, And time constant from very, very, very small; So 0.05 seconds to about 2 seconds.  
+These are all the values, that can be used.  
+However, they always have to be in opposite direction.  
+So if one is increased, the other should be reduced.    
+  
+
+
+
 ## 1.4.5 Modelling of Turbines and Governors  
 LECTURER:   
 The next device, the next regulator control.  
